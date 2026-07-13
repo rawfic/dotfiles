@@ -4,7 +4,13 @@ return {
     build = ':TSUpdate',
 
     config = function()
-        require('nvim-treesitter').install { 'rust', 'javascript', 'zig' }
+        require('nvim-treesitter').install { 
+            'rust',
+            'zig', 
+            'bash', 
+            'php', 
+            'javascript', 
+        }
 
         vim.api.nvim_create_autocmd("FileType", {
             callback = function()
