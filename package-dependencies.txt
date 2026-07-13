@@ -1,0 +1,8 @@
+
+// For Nvim to work
+sudo apt install luarocks
+sudo apt install ripgrep fd-find
+
+Please ensure you have treesitter installed
+
+//
