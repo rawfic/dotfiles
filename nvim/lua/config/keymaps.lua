@@ -3,6 +3,8 @@ vim.keymap.set("i", "<M-+>", "~")
 vim.keymap.set("i", "<M-'>", "\\")
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Left window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Down window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Up window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Right window" })
 vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
 
