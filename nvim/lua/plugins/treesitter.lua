@@ -1,21 +1,23 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    lazy = false,
-    build = ':TSUpdate',
+	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
+	build = ":TSUpdate",
 
-    config = function()
-        require('nvim-treesitter').install { 
-            'rust',
-            'zig', 
-            'bash', 
-            'php', 
-            'javascript', 
-        }
+	config = function()
+		require("nvim-treesitter").install({
+			"c",
+			"cpp",
+			"python",
+			"rust",
+			"bash",
+			"php",
+			"javascript",
+		})
 
-        vim.api.nvim_create_autocmd("FileType", {
-            callback = function()
-                pcall(vim.treesitter.start)
-            end,})
-
-    end,  
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function()
+				pcall(vim.treesitter.start)
+			end,
+		})
+	end,
 }

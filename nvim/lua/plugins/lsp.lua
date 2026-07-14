@@ -1,59 +1,60 @@
 return {
-    {
-        "mason-org/mason.nvim",
-        opts = {}
-    },
+	{
+		"mason-org/mason.nvim",
+		opts = {},
+	},
 
-    {
-        "mason-org/mason-lspconfig.nvim",
-        opts = {
-            ensure_installed = {
-                "lua_ls",
-                "pyright",
-                "clangd",
-                "bashls",
-                "ts_ls",
-                "typescript-language-server",
-            },
-        },
-        dependencies = {
-            "neovim/nvim-lspconfig",
-        },
-        config = function()
-            vim.lsp.enable({
-                "lua_ls",
-                "pyright",
-                "clangd",
-                "bashls",
-                "ts_ls",
-            })
-           
-            vim.diagnostic.config({
+	{
+		"mason-org/mason-lspconfig.nvim",
+		opts = {
+			ensure_installed = {
+				"lua_ls",
+				"pyright",
+				"clangd",
+				"bashls",
+				"ts_ls",
+				"intelephense",
+				"typescript-language-server",
+			},
+		},
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+		config = function()
+			vim.lsp.enable({
+				"lua_ls",
+				"pyright",
+				"clangd",
+				"bashls",
+				"ts_ls",
+				"intelephense",
+			})
 
-                severity_sort = true,
-                
-                underline = {
-                    severity = {
-                        min = vim.diagnostic.severity.ERROR,
-                    },
-                },
+			vim.diagnostic.config({
 
-                virtual_text = {
-                    severity = {
-                        min = vim.diagnostic.severity.WARN,
-                    },
-                },
+				severity_sort = true,
 
-                signs = {
-                    severity = {
-                        min = vim.diagnostic.severity.WARN,
-                    },
-                },
-            })
+				underline = {
+					severity = {
+						min = vim.diagnostic.severity.ERROR,
+					},
+				},
 
-            vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
-            vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+				virtual_text = {
+					severity = {
+						min = vim.diagnostic.severity.WARN,
+					},
+				},
 
-        end,
-    },
+				signs = {
+					severity = {
+						min = vim.diagnostic.severity.WARN,
+					},
+				},
+			})
+
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+		end,
+	},
 }

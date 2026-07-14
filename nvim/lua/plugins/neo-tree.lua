@@ -7,4 +7,12 @@ return {
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
     lazy = false, -- neo-tree will lazily load itself
+    opts = {
+        window = {
+            mappings = {
+                ["h"] = "close_node",
+                ["l"] = "open",
+            },
+        }
+    }
 }
