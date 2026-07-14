@@ -13,6 +13,8 @@ return {
 				"clangd",
 				"bashls",
 				"ts_ls",
+				"gopls",
+				"rust_analyzer",
 				"intelephense",
 				"typescript-language-server",
 			},
@@ -27,6 +29,8 @@ return {
 				"clangd",
 				"bashls",
 				"ts_ls",
+				"gopls",
+				"rust_analyzer",
 				"intelephense",
 			})
 

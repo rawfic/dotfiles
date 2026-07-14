@@ -6,6 +6,7 @@ return {
 	config = function()
 		require("nvim-treesitter").install({
 			"c",
+			"go",
 			"cpp",
 			"python",
 			"rust",
